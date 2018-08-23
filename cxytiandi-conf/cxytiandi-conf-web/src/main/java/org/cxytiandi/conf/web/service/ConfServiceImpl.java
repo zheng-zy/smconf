@@ -62,6 +62,8 @@ public class ConfServiceImpl implements ConfService {
 				nodes.add(client.split("&")[0]);
 			}
 		}
+		// 无服务修改值
+		nodes.add("127.0.0.1:8080");
 		return nodes;
 	}
 

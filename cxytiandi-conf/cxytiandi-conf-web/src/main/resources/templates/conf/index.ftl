@@ -81,8 +81,12 @@
 		                				<div style="height:20px;">
 			                				<#if bo.nodes??>
 		                						<#list bo.nodes as n>
-		                							${n!}<br/>
-		                							<input type="hidden" class="node${bo.id!}" value="${n!}"/>
+													<#if !n_has_next>
+													    <input type="hidden" class="node${bo.id!}" value="${n!}"/>
+													<#else>
+														${n!}<br/>
+		                								<input type="hidden" class="node${bo.id!}" value="${n!}"/>
+													</#if>
 		                						</#list>
 		                					</#if>
 		                				</div>
