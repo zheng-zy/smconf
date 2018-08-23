@@ -18,9 +18,9 @@
       </a>
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <li>
-            <a target="_blank" href="https://github.com/yinjihuan/smconf">文档</a>
-          </li>
+          <#--<li>-->
+            <#--<a target="_blank" href="https://github.com/yinjihuan/smconf">文档</a>-->
+          <#--</li>-->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <span class="hidden-xs"><#if login_user_name?exists>${login_user_name}</#if></span>
