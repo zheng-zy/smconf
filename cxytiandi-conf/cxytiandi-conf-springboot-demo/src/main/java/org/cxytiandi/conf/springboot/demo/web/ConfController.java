@@ -3,6 +3,7 @@ package org.cxytiandi.conf.springboot.demo.web;
 import java.util.Map;
 
 import org.cxytiandi.conf.client.init.ConfInit;
+import org.cxytiandi.conf.springboot.demo.conf.JwtConf;
 import org.cxytiandi.conf.springboot.demo.conf.MongoConf;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,9 @@ public class ConfController {
 	
 	@Autowired
 	private MongoConf mongoConf;
+
+	@Autowired
+	private JwtConf jwtConf;
 	
 	@Autowired
 	private ConfInit confInit;
@@ -20,6 +24,11 @@ public class ConfController {
 	@GetMapping("/conf")
 	public MongoConf get() {
 		return mongoConf;
+	}
+
+	@GetMapping("/jwtConf")
+	public JwtConf getJwtConf() {
+		return jwtConf;
 	}
 	
 	/**
